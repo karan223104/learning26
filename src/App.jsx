@@ -19,6 +19,10 @@ import { NetflixShow } from './components/NetflixShow.jsx'
 import { NetflixMovie } from './components/NetflixMovie.jsx'
 import { Route, Routes } from 'react-router-dom'
 import { HomeComponent } from './components/HomeComponent.jsx'
+import { ErrorFound } from './components/ErrorFound.jsx'
+import { Watch } from './components/Watch.jsx'
+import { Teams } from './components/Teams.jsx'
+import { TeamDetails } from './components/TeamDetails.jsx'
 
 function App() {
   return (
@@ -26,10 +30,14 @@ function App() {
       <NavBar></NavBar>
 
       <Routes>
+        <Route path="/teams" element={<Teams/>}/>
+        <Route path="/teamdetails/:detail" element={<TeamDetails/>}/>
         <Route path="/" element={<HomeComponent />} />
         <Route path="/netflixhome" element={<NetflixHome />} />
         <Route path="/netflixshow" element={<NetflixShow />} />
         <Route path="/netflixmovie" element={<NetflixMovie />} />
+        <Route path="/watch/:name" element={<Watch/>}/>
+        <Route path="/*" element={<ErrorFound/>}/>
       </Routes>
       <HeaderComponent></HeaderComponent>
       <ContentComponent></ContentComponent>
