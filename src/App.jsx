@@ -23,6 +23,10 @@ import { ErrorFound } from './components/ErrorFound.jsx'
 import { Watch } from './components/Watch.jsx'
 import { Teams } from './components/Teams.jsx'
 import { TeamDetails } from './components/TeamDetails.jsx'
+import { FunctionDemo } from './components/FunctionDemo.jsx'
+import { UseStateDemo1 } from './components/UseStateDemo1.jsx'
+import { UseStateDemo2 } from './components/UseStateDemo2.jsx'
+import { UseStateDemo3 } from './components/UseStateDemo3.jsx'
 
 function App() {
   return (
@@ -37,6 +41,10 @@ function App() {
         <Route path="/netflixshow" element={<NetflixShow />} />
         <Route path="/netflixmovie" element={<NetflixMovie />} />
         <Route path="/watch/:name" element={<Watch/>}/>
+        <Route path="/functiondemo" element={<FunctionDemo/>}/>
+        <Route path="/usestatedemo1" element={<UseStateDemo1/>}/>
+        <Route path="/usestatedemo2" element={<UseStateDemo2/>}/>
+        <Route path="/usestatedemo3" element={<UseStateDemo3/>}/>
         <Route path="/*" element={<ErrorFound/>}/>
       </Routes>
       <HeaderComponent></HeaderComponent>

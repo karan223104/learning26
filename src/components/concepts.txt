@@ -160,3 +160,71 @@
     -> Routing means handling navigation between different views. 
      
     -> use Link tag instead of a
+
+9.  routing 
+
+    -> When the URL changes, show a different page (component).
+
+       - /home      → Home page
+         /about     → About page
+
+    dynamic routing
+
+    -> Part of the URL can change, but the page stays the same
+       
+       - /users/1
+         /users/2
+         /users/99
+       - 1, 2, 99 are dynamic
+       - The component is stil same
+
+       - <Route path="/users/:id" element={<User />} />
+       - :id → dynamic value
+       - id is called a route parameter
+
+11. spread operator
+
+    -> [...users, "royal"]
+       
+       - create a new array
+       - copy all existing values from users
+       - add "royal" at the end
+
+       - Memory Heap  users    ──▶ 0xA1 ──▶ ["karan", "aman"]
+                      newUsers ──▶ 0xB2 ──▶ ["karan", "aman", "royal"]
+
+       - New memory address (0xB2)
+       - Original data untouched
+
+       - setUsers(newUsers);
+         oldUsers (0xA1) !== newUsers (0xB2)
+       - React sees change → ✅ re-render
+    
+    push
+
+    -> const addUser = () => {
+         users.push("royal");
+         setUsers(users);
+       };
+
+       - push mutates the existing array
+       - It does NOT create a new array
+       - here value in array is updated but UI must same not change data in webpage
+
+       - Memory Heap --> users ──▶ 0xA1 ──▶ ["karan", "aman", "royal"]
+
+       - oldUsers (0xA1) === newUsers (0xA1) 
+       - React thinks nothing changed → ❌ no re-render
+
+
+11. Immutability = you do NOT change the original data, stat.
+    Instead, you create a NEW copy with the changes.
+
+12. hooks --> there several hooks in react
+
+    useParams: Reads dynamic values from the URL
+
+    -> as mention above :id , useParams read the value and update the value in UI
+
+
+
