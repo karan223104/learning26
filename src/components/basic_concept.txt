@@ -1,0 +1,87 @@
+1.  -> need to close all tags even <br> or any
+
+    -> use ternary operator instead of if else
+
+    -> only return one tag means <div></div> write all stuff between this two
+
+2.  -> components name must in capital
+
+    -> no rule to same name of file and component
+
+3.  there are two type of functions
+
+    -> arrow function  
+       
+    -   import React from 'react'                                               (default export)
+
+        const FooterComponent = () => {
+        return (
+            <div>
+                
+            </div>
+        )
+        }
+
+        export default FooterComponent
+
+    --  import FooterComponent from './components/FooterComponent.jsx'          (default import)
+        
+    -   import React from 'react'                                   (non default (named) export)
+
+        export const FooterComponent = () => {
+        return (
+            <div>FooterComponent</div>
+        )
+        }
+
+    --  import {FooterComponent} from './components/FooterComponent.jsx'        (default import)
+    
+    ->  normal function
+
+    -   import React from 'react'                                              (default export1)
+
+        export default function ContentComponent() {
+        return (
+            <div></div>
+        )
+        }
+    
+    --  import ContentComponent from './components/ContentComponent.jsx'
+        
+    -   import React from 'react'                                              (default export2)
+
+        function ContentComponent() {
+        return (
+            <div></div>
+        )
+        }
+
+        export default ContentComponent
+    
+    --  import ContentComponent from './components/ContentComponent.jsx'
+
+    -   export function TestComponent ()  {                         (non default (named) export)
+
+        return (
+        <div>
+            <h1>This is test component</h1>
+        </div>
+        )
+        }
+
+    --  import { TestComponent } from './components/ContentComponent.jsx'
+    
+    -   {} its called named export
+
+4.  class and className Difference
+
+    -> class is reserved word in react so if we write class its generate error.
+
+5.  Immutability 
+ 
+    -> you do NOT change the original data, stat.
+    Instead, you create a NEW copy with the changes.
+
+6.  fallback 
+
+    -> means that when actual value or img or anything is not load then that default value is shown.

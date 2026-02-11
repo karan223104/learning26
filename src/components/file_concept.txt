@@ -1,0 +1,33 @@
+1. File elaboration
+
+    -> public - This contains static files (not processed by React).
+
+    -> src - all components and react, css file is there
+
+    -> app.jsx    - main component which first render by main.jsx 
+                  - all components are in this
+                  - control what the user see  
+
+    -> app.css    - styles specific to App
+
+    -> main.jsx   - Attach React to the browser
+
+    -> index.html - root of react application   
+                  - entry point of application
+                  - contains meta data of application
+
+    -> index.css  - global style
+
+    -> json file  - use to store data in key value pair     
+
+    -> flow:
+    
+        index.html
+            ↓
+        main.jsx / index.js
+            ↓
+        app.jsx
+            ↓
+        Your components
+        
+    

@@ -1,0 +1,36 @@
+1.  React Routing
+
+    -> first fire this command in terminal  'npm i react-router-dom'. routing library
+
+    -> <BrowserRouter> it enables routing in react application. write in "main.jsx"  
+
+    -> - Link: Creates navigation links that update the URL
+       - Routes: A container for all your route definitions
+       - Route: Defines a mapping between a URL path and a component
+
+    -> Single Page Applications (SPA), so routing is handled inside JavaScript, not by the browser.
+
+    -> Routing means handling navigation between different views. 
+     
+    -> use Link tag instead of a
+
+2.  routing 
+
+    -> When the URL changes, show a different page (component).
+
+       - /home      → Home page
+         /about     → About page
+
+    dynamic routing
+
+    -> Part of the URL can change, but the page stays the same
+       
+       - /users/1
+         /users/2
+         /users/99
+       - 1, 2, 99 are dynamic
+       - The component is stil same
+
+       - <Route path="/users/:id" element={<User />} />
+       - :id → dynamic value
+       - id is called a route parameter

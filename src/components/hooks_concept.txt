@@ -1,0 +1,29 @@
+1. hooks --> there several hooks in react
+
+    -> Hooks must always be called at the top level of your function. Don't put them inside loops, conditions, or nested functions.
+
+    -> Hooks are functions introduced in React that allow functional components to manage state and use lifecycle features without using class components.
+
+
+11. useParams: Reads dynamic values from the URL
+
+    -> as mention above :id , useParams read the value and update the value in UI
+
+12. useState: When that state changes, React automatically re-renders the component to show the  update.
+
+    -> const [state, setState] = useState(initialValue);
+           
+        - state: The current value (like a variable).
+        - setState: A function used to update that value.(seter function)
+        - initialValue: The value the state starts with (could be a number, string, array, or object).
+
+    -> setCount instead of just count = count + 1 ?
+    
+        - If you just change a variable, React has no idea it changed. By using the setter function (setCount), you notify React that the data is different, which triggers the UI to refresh.
+
+        -> also we can use it for arrays or objects
+
+        ->pros and cons
+           
+           --> useState is simple and great for local state, but it becomes hard to manage for complex or global state logic. rerender application every time and its take high load time use another hook or mechanism
+

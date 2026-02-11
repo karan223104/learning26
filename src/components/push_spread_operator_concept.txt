@@ -1,0 +1,33 @@
+1. spread operator
+
+    -> [...users, "royal"]
+       
+       - create a new array
+       - copy all existing values from users
+       - add "royal" at the end
+
+       - Memory Heap  users    ──▶ 0xA1 ──▶ ["karan", "aman"]
+                      newUsers ──▶ 0xB2 ──▶ ["karan", "aman", "royal"]
+
+       - New memory address (0xB2)
+       - Original data untouched
+
+       - setUsers(newUsers);
+         oldUsers (0xA1) !== newUsers (0xB2)
+       - React sees change → ✅ re-render
+    
+    push
+
+    -> const addUser = () => {
+         users.push("royal");
+         setUsers(users);
+       };
+
+       - push mutates the existing array
+       - It does NOT create a new array
+       - here value in array is updated but UI must same not change data in webpage
+
+       - Memory Heap --> users ──▶ 0xA1 ──▶ ["karan", "aman", "royal"]
+
+       - oldUsers (0xA1) === newUsers (0xA1) 
+       - React thinks nothing changed → ❌ no re-render

@@ -1,0 +1,15 @@
+1. vdom is lightweighted copy of real dom
+
+    -> change or manipulation in real dom is expensive
+    -> lightweighted, fast, sync-able
+    -> stpes:
+
+        - rendering: when any change occur
+
+        - creation of vdom
+
+        - diffing algorithm: React compares the new Virtual DOM tree with a snapshot of the    previous Virtual DOM tree. It uses a highly optimized "diffing" algorithm to find exactly what changed.
+
+        - Reconciliation: Once React knows exactly what changed, it calculates the most efficient way to update the Real DOM.
+
+        -patching: patch the value
