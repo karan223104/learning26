@@ -27,6 +27,8 @@ import { FunctionDemo } from './components/FunctionDemo.jsx'
 import { UseStateDemo1 } from './components/UseStateDemo1.jsx'
 import { UseStateDemo2 } from './components/UseStateDemo2.jsx'
 import { UseStateDemo3 } from './components/UseStateDemo3.jsx'
+import { Employee } from './components/Employee.jsx'
+import { Input } from './components/Input.jsx'
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
         <Route path="/usestatedemo1" element={<UseStateDemo1/>}/>
         <Route path="/usestatedemo2" element={<UseStateDemo2/>}/>
         <Route path="/usestatedemo3" element={<UseStateDemo3/>}/>
+        <Route path="/employee" element={<Employee/>}/>
+        <Route path="/input" element={<Input/>}/>
         <Route path="/*" element={<ErrorFound/>}/>
       </Routes>
       <HeaderComponent></HeaderComponent>
