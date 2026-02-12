@@ -1,0 +1,50 @@
+1. Form validation
+
+   -> Checking user input before submitting the form to make sure it is correct, complete, and safe.
+
+   -> Without validation:
+
+      - User can submit empty form
+      - User can enter wrong email
+      - User can enter letters in phone number
+      - Data stored in database becomes incorrect
+      - Security risks increase
+
+    -> Types of Form Validation
+        
+        --> Client-Side Validation (Frontend)
+
+            Done in browser using:
+
+            - HTML attributes
+            - JavaScript
+            - React
+            - React Hook Form
+
+            Example:
+
+            - Required field
+            - Email format check
+            - Password length
+
+        Fast
+        Better user experience
+        Not fully secure (can be bypassed)
+
+        --> Server-Side Validation (Backend)
+
+            - Done on server using:
+            - Node.js
+            - PHP
+            - Java
+            - Python
+
+            Example:
+
+            - Check if email already exists
+            - Check password strength
+            - Validate database rules
+
+        Secure
+        Cannot be bypassed
+        Always required
