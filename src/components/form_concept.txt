@@ -1,4 +1,4 @@
-1. Form validation
+1.  Form validation
 
    -> Checking user input before submitting the form to make sure it is correct, complete, and safe.
 
@@ -48,3 +48,64 @@
         Secure
         Cannot be bypassed
         Always required
+
+2.  validation
+
+    -> react-hook-form library (there are many other librarys)
+
+    -> validations: - required: field is required to be field
+                    - min: minimum value 
+                    - max: maximum value
+                    - minLength: minimum char required length  
+                    - maxLength: maximum char required length 
+                    - pattern: particular pattern
+                    - validate: custom validator
+    
+3.  we can write it in input field or as object 
+
+4.  formState:{errors}
+
+    -> we use any name instead of errors
+
+    -> {errors.add?.message}                        --> optional chaining
+
+        - "If this exists(here the error), then continue(shows the message).
+           If not, return undefined safely."
+
+    -> {errors.add.message}
+
+        - If no error exists → ❌ CRASH
+          Because errors.add is undefined.
+
+        - cannot read property of undefined
+
+    -> we can use {erros.add} && {errors.add.message} instead of {errors.add?.message} both logic are same
+
+5.  why we use watch function  
+
+    -> Observe (monitor) the value of a form field in real time.
+
+    -> - You use useState
+       - You update value with onChange                    // without watch
+       - Component re-renders
+
+    -> - See current value while typing
+       - Compare two fields (like confirm password)        // with watch
+       - Create live validation (like password strength)
+
+6.  mode
+
+    | Mode          | When Validation Runs        |
+    | ------------- | --------------------------- |
+    | `"onSubmit"`  | Only when form is submitted |
+    | `"onChange"`  | Every time input changes    |
+    | `"onBlur"`    | When input loses focus      |
+    | `"onTouched"` | First blur, then onChange   |
+    | `"all"`       | On blur AND on change       |
+
+7. in formdemo5 logic is in this way
+
+   -> if no error password logic part is return false(undefined)
+
+      - so if false then execute ""   (no any message show)
+      - || use          -->  before this value is falsy then execute after part

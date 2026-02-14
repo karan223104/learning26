@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 export const FormDemo4 = () => {
-  const {register,handleSubmit,formState: { errors }} = useForm();
+  const {register,handleSubmit,formState: { errors }} = useForm({mode:"all"});
   const [userData, setuserData] = useState({});
   const [isSubmited, setisSubmited] = useState(false);
 
@@ -31,22 +31,16 @@ export const FormDemo4 = () => {
       },
     },
     bloodgroupValidator: {
-      required: {
-        value: true,
-        message: "select any one option",
-      },
+      validate: (value) =>
+      value.length > 0 || "Select at least one state"
     },
     stateValidator: {
-      required: {
-        value: true,
-        message: "select any one option",
-      },
+      validate: (value) =>
+      value.length > 0 || "Select at least one state"
     },
     cityValidator: {
-      required: {
-        value: true,
-        message: "select any one option",
-      },
+      validate: (value) =>
+      value.length > 0 || "Select at least one state"
     },
     mobileValidator: {
       required: {
@@ -54,7 +48,7 @@ export const FormDemo4 = () => {
         message: "Please enter mobile number",
       },
       pattern: {
-        value: /^[0-9]{10}$/,
+        value: /^[6-9]{1}[0-9]{9}$/,
         message: "Mobile number must be 10 digits",
       },
     },
@@ -73,18 +67,18 @@ export const FormDemo4 = () => {
         value: true,
         message: "Password is required",
       },
-      pattern: {
-        value:
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        message:
-          "Password must be 8+ chars, include uppercase, lowercase, number & special character",
+      minLength: {
+        value: 3,
+        message: "minimum 3 charachter requierd",
+      },
+      maxLength: {
+        value: 10,
+        message: "maximum 10 charachter requierd",
       },
     },
     timeValidator: {
-      required: {
-        value: true,
-        message: "select any one option",
-      },
+      validate: (value) =>
+      value.length > 0 || "Select at least one state"
     },
   };
   return (
@@ -99,8 +93,8 @@ export const FormDemo4 = () => {
         {errors.fullName && errors.fullName.message}<br></br>
 
         <label>Bloodgroup:</label>
-        <select defaultValue="" {...register("bloodGroup", validators.bloodgroupValidator)}>
-          <option value="" disabled>--Please choose an option--</option>
+        <select defaultValue=""{...register("bloodGroup", validators.bloodgroupValidator)}>
+          <option value=""disabled>--Please choose an option--</option>
           <option>o+</option>
           <option>b-</option>
           <option>a+</option>

@@ -33,6 +33,7 @@ import { FormDemo1 } from './components/Form/FormDemo1.jsx'
 import { FormDemo2 } from './components/Form/FormDemo2.jsx'
 import { FormDemo3 } from './components/Form/FormDemo3.jsx'
 import { FormDemo4 } from './components/Form/FormDemo4.jsx'
+import { FormDemo5 } from './components/Form/FormDemo5.jsx'
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/formdemo2" element={<FormDemo2/>}/>
         <Route path="/formdemo3" element={<FormDemo3/>}/>
         <Route path="/formdemo4" element={<FormDemo4/>}/>
+        <Route path="/formdemo5" element={<FormDemo5/>}/>
         <Route path="/*" element={<ErrorFound/>}/>
       </Routes>
       <HeaderComponent></HeaderComponent>
