@@ -14,7 +14,7 @@ export const ApiDemo = () => {
         console.log(response.data)
         console.log(response.data.message)
         setmessage(response.data.message)
-        console.log(response.data.data) //array
+        console.log(response.data.data) 
         setusers(response.data.data)
 
     }

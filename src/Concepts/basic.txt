@@ -85,3 +85,29 @@
 6.  fallback 
 
     -> means that when actual value or img or anything is not load then that default value is shown.
+
+7.  JSON array,object,numbers
+
+    -> JSON object
+       {
+            "name": "Karan",
+            "age": 22
+        }
+    
+    -> JSON array
+
+        -> A JSON array is a collection (list) of values inside square brackets [].
+        -> It can store: Strings, Numbers, Booleans, Objects, Even other arrays
+
+    -> JSON array of object
+        [
+        {
+            "id": 1,
+            "name": "Karan"
+        },
+        {
+            "id": 2,
+            "name": "Rahul"
+        }
+        ]
+

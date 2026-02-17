@@ -1,5 +1,6 @@
 import React from 'react'
-import '../assets/css/HeaderComponent.css'
+import "./HeaderComponent.css";
+
 export const HeaderComponent = () => {
   return (
     <div className='header'>

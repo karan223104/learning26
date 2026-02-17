@@ -1,0 +1,17 @@
+1.  What is an API?
+
+    -> API = Application Programming Interface
+
+       - An API is a bridge that allows two applications to talk to each other.
+
+    -> In MERN:
+
+       - React → sends request
+       - Node/Express → receives request
+       - Database → sends data back
+       - API → sends response to frontend
+
+    -> How JSON is Used in APIs
+
+       - APIs mostly send and receive data in JSON format.
+       - Because JSON is: Lightweight, Easy to read, Easy to convert into JavaScript object

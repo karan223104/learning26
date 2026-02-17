@@ -27,7 +27,7 @@ export const NavBar = () => {
                 netflixhome
               </Link>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <Link class="nav-link" to="/netflixshow">
                 netflixshow
               </Link>
@@ -37,11 +37,11 @@ export const NavBar = () => {
                 netflixmovie
               </Link>
             </li>
-            {/* <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/teams">
                 team
               </Link>
-            </li>
+            </li> */}
             <li class="nav-item">
               <Link class="nav-link" to="/functiondemo">
                 functiondemo
@@ -63,6 +63,16 @@ export const NavBar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link" to="/usestatedemo4">
+                usestatedemo4
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/usestatedemo5">
+                usestatedemo5
+              </Link>
+            </li>
+            {/* <li class="nav-item">
               <Link class="nav-link" to="/employee">
                 employee
               </Link>
@@ -71,7 +81,7 @@ export const NavBar = () => {
               <Link class="nav-link" to="/input">
                 input
               </Link>
-            </li> */}
+            </li> 
             <li class="nav-item">
               <Link class="nav-link" to="/formdemo1">
                 formdemo1
@@ -96,7 +106,7 @@ export const NavBar = () => {
               <Link class="nav-link" to="/formdemo5">
                 formdemo5             
               </Link>
-            </li>
+            </li> */}
             <li class="nav-item">
               <Link class="nav-link" to="/apidemo">
                 apidemo           
