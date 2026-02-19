@@ -3,7 +3,7 @@ import viteLogo from "/vite.svg";
 // import './App.css'
 import { HeaderComponent } from "./components/Header/HeaderComponent.jsx";
 import { FooterComponent } from "./components/Footer/FooterComponent.jsx";
-import ContentComponent from "./components/ContentComponent.jsx";
+import ContentComponent from "./components/Content/ContentComponent.jsx";
 import { MapDemo1 } from "./components/Map/MapDemo1.jsx";
 import { MapDemo2 } from "./components/Map/MapDemo2.jsx";
 import { MapDemo3 } from "./components/Map/MapDemo3.jsx";
@@ -29,15 +29,23 @@ import { UseStateDemo3 } from "./components/UseState/UseStateDemo3.jsx";
 import { UseStateDemo4 } from "./components/UseState/UseStateDemo4.jsx";
 import { UseStateDemo5 } from "./components/UseState/UseStateDemo5.jsx";
 import { Employee } from "./components/Props/Employee.jsx";
-import { Input } from "./components/Input.jsx";
+import { Input } from "./components/Content/Input.jsx";
 import { FormDemo1 } from "./components/Form/FormDemo1.jsx";
 import { FormDemo2 } from "./components/Form/FormDemo2.jsx";
 import { FormDemo3 } from "./components/Form/FormDemo3.jsx";
 import { FormDemo4 } from "./components/Form/FormDemo4.jsx";
 import { FormDemo5 } from "./components/Form/FormDemo5.jsx";
-import { ApiDemo } from "./components/Api/ApiDemo.jsx";
+import { ApiDemo1 } from "./components/Api/ApiDemo1.jsx";
+import { ApiDemo2 } from "./components/Api/ApiDemo2.jsx";
+import { OmdbSearch } from "./components/Api/OmdbSearch.jsx";
+import { OmdbSearch1 } from "./components/Api/OmdbSearch1.jsx";
+import { MovieGrid } from "./components/Api/MovieGrid.jsx";
+import MovieSearch from "./components/Api/MovieSearch.jsx";
+import { FormPost } from "./components/Api/FormPost.jsx";
 
 function App() {
+  const [movieData, setMovieData] = useState([]);
+
   return (
     <>
       <NavBar></NavBar>
@@ -63,7 +71,13 @@ function App() {
         <Route path="/formdemo3" element={<FormDemo3 />} />
         <Route path="/formdemo4" element={<FormDemo4 />} />
         <Route path="/formdemo5" element={<FormDemo5 />} />
-        <Route path="/apidemo" element={<ApiDemo />} />
+        <Route path="/apidemo1" element={<ApiDemo1 />} />
+        <Route path="/apidemo2" element={<ApiDemo2 />} />
+        <Route path="/omdbsearch" element={<OmdbSearch />} />
+        <Route path="/*" element={<OmdbSearch1 setMovieData={setMovieData} />}/>
+        <Route path="/grid/:id" element={<MovieGrid />} />
+        <Route path="moviesearch" element={<MovieSearch />} />
+        <Route path="formpost" element={<FormPost/>}/>
         <Route path="/*" element={<ErrorFound />} />
       </Routes>
       <HeaderComponent></HeaderComponent>

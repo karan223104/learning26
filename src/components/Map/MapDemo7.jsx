@@ -14,7 +14,7 @@ export const MapDemo7 = () => {
   return (
     <div>
         <h1>MapDemo7</h1>
-        <table class="table table-bordered">
+        <table className="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>

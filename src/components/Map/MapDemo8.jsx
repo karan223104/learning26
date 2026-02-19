@@ -14,7 +14,7 @@ export const MapDemo8 = () => {
   return (
     <div>
       <h1>MapDemo8</h1>
-      <table class="table table-dark">
+      <table className="table table-dark">
         <thead>
           <tr>
             <th>ID</th>

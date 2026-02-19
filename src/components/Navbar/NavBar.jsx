@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 export const NavBar = () => {
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="/">
           Home
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -17,99 +17,124 @@ export const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/netflixhome">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            {/* <li className="nav-item active">
+              <Link className="nav-link" to="/netflixhome">
                 netflixhome
               </Link>
             </li>
-            {/* <li class="nav-item">
-              <Link class="nav-link" to="/netflixshow">
+            <li className="nav-item">
+              <Link className="nav-link" to="/netflixshow">
                 netflixshow
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/netflixmovie">
+            <li className="nav-item">
+              <Link className="nav-link" to="/netflixmovie">
                 netflixmovie
               </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/teams">
+            </li> */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/teams">
                 team
               </Link>
-            </li> */}
-            <li class="nav-item">
-              <Link class="nav-link" to="/functiondemo">
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/functiondemo">
                 functiondemo
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/usestatedemo1">
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/usestatedemo1">
                 usestatedemo1
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/usestatedemo2">
+            <li className="nav-item">
+              <Link className="nav-link" to="/usestatedemo2">
                 usestatedemo2
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/usestatedemo3">
+            <li className="nav-item">
+              <Link className="nav-link" to="/usestatedemo3">
                 usestatedemo3
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/usestatedemo4">
+            <li className="nav-item">
+              <Link className="nav-link" to="/usestatedemo4">
                 usestatedemo4
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/usestatedemo5">
+            <li className="nav-item">
+              <Link className="nav-link" to="/usestatedemo5">
                 usestatedemo5
               </Link>
-            </li>
-            {/* <li class="nav-item">
-              <Link class="nav-link" to="/employee">
+            </li> */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/employee">
                 employee
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/input">
+            <li className="nav-item">
+              <Link className="nav-link" to="/input">
                 input
               </Link>
             </li> 
-            <li class="nav-item">
-              <Link class="nav-link" to="/formdemo1">
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/formdemo1">
                 formdemo1
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/formdemo2">
+            <li className="nav-item">
+              <Link className="nav-link" to="/formdemo2">
                 formdemo2
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/formdemo3">
+            <li className="nav-item">
+              <Link className="nav-link" to="/formdemo3">
                 formdemo3
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/formdemo4">
+            <li className="nav-item">
+              <Link className="nav-link" to="/formdemo4">
                 formdemo4             
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/formdemo5">
+            <li className="nav-item">
+              <Link className="nav-link" to="/formdemo5">
                 formdemo5             
               </Link>
             </li> */}
-            <li class="nav-item">
-              <Link class="nav-link" to="/apidemo">
-                apidemo           
+            <li className="nav-item">
+              <Link className="nav-link" to="/apidemo1">
+                apidemo1         
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/apidemo2">
+                apidemo2        
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/omdbsearch">
+               omdbsearch        
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/omdbsearch1">
+               omdbsearch1        
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/moviesearch">
+               moviesearch        
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/formpost">
+               formpost        
               </Link>
             </li>
           </ul>
