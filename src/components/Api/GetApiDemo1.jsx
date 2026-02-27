@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 
-export const ApiDemo1 = () => {
+export const GetApiDemo1 = () => {
     
     const [message, setmessage] = useState("")
     const [users, setusers] = useState([])
@@ -21,7 +21,7 @@ export const ApiDemo1 = () => {
     
   return (
     <div>
-        <h1>ApiDemo1</h1>
+        <h1>GetApiDemo1</h1>
         <button onClick={()=>{getUsers()}}>GET</button>
         <h1>message = {message}</h1>
         {
@@ -29,7 +29,7 @@ export const ApiDemo1 = () => {
                 return <li>{user.name}</li>
             })
         }
-        <table border="1" align="center">
+        <table className="min-w-full border border-gray-200">
         <thead>
           <tr>
             <th>NAME</th>

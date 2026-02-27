@@ -28,6 +28,7 @@ import { UseStateDemo2 } from "./components/UseState/UseStateDemo2.jsx";
 import { UseStateDemo3 } from "./components/UseState/UseStateDemo3.jsx";
 import { UseStateDemo4 } from "./components/UseState/UseStateDemo4.jsx";
 import { UseStateDemo5 } from "./components/UseState/UseStateDemo5.jsx";
+import { UseEffectDemo1 } from "./components/UseEffect/UseEffectDemo1.jsx";
 import { Employee } from "./components/Props/Employee.jsx";
 import { Input } from "./components/Content/Input.jsx";
 import { FormDemo1 } from "./components/Form/FormDemo1.jsx";
@@ -35,13 +36,13 @@ import { FormDemo2 } from "./components/Form/FormDemo2.jsx";
 import { FormDemo3 } from "./components/Form/FormDemo3.jsx";
 import { FormDemo4 } from "./components/Form/FormDemo4.jsx";
 import { FormDemo5 } from "./components/Form/FormDemo5.jsx";
-import { ApiDemo1 } from "./components/Api/ApiDemo1.jsx";
-import { ApiDemo2 } from "./components/Api/ApiDemo2.jsx";
+import { GetApiDemo1 } from "./components/Api/GetApiDemo1.jsx";
+import PostApiDemo1 from "./components/Api/PostApiDemo1.jsx";
+import { DeleteApiDemo1 } from "./components/Api/DeleteApiDemo1.jsx";
 import { OmdbSearch } from "./components/Api/OmdbSearch.jsx";
-import { OmdbSearch1 } from "./components/Api/OmdbSearch1.jsx";
 import { MovieGrid } from "./components/Api/MovieGrid.jsx";
 import MovieSearch from "./components/Api/MovieSearch.jsx";
-import { FormPost } from "./components/Api/FormPost.jsx";
+import { ToastContainer, Zoom } from "react-toastify";
 
 function App() {
   const [movieData, setMovieData] = useState([]);
@@ -64,6 +65,7 @@ function App() {
         <Route path="/usestatedemo3" element={<UseStateDemo3 />} />
         <Route path="/usestatedemo4" element={<UseStateDemo4 />} />
         <Route path="/usestatedemo5" element={<UseStateDemo5 />} />
+        <Route path="/useeffectdemo1" element={<UseEffectDemo1 />} />
         <Route path="/employee" element={<Employee />} />
         <Route path="/input" element={<Input />} />
         <Route path="/formdemo1" element={<FormDemo1 />} />
@@ -71,13 +73,12 @@ function App() {
         <Route path="/formdemo3" element={<FormDemo3 />} />
         <Route path="/formdemo4" element={<FormDemo4 />} />
         <Route path="/formdemo5" element={<FormDemo5 />} />
-        <Route path="/apidemo1" element={<ApiDemo1 />} />
-        <Route path="/apidemo2" element={<ApiDemo2 />} />
+        <Route path="/getapidemo1" element={<GetApiDemo1 />} />
+        <Route path="/postapidemo1" element={<PostApiDemo1 />} />
+        <Route path="/deleteapidemo1" element={<DeleteApiDemo1 />} />
         <Route path="/omdbsearch" element={<OmdbSearch />} />
-        <Route path="/*" element={<OmdbSearch1 setMovieData={setMovieData} />}/>
         <Route path="/grid/:id" element={<MovieGrid />} />
         <Route path="moviesearch" element={<MovieSearch />} />
-        <Route path="formpost" element={<FormPost/>}/>
         <Route path="/*" element={<ErrorFound />} />
       </Routes>
       <HeaderComponent></HeaderComponent>
@@ -91,6 +92,19 @@ function App() {
       <MapDemo7></MapDemo7>
       <MapDemo8></MapDemo8>
       <FooterComponent></FooterComponent>
+       <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Zoom}
+      />
     </>
   );
 }

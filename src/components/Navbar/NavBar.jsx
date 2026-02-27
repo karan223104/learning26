@@ -37,7 +37,7 @@ export const NavBar = () => {
                 netflixmovie
               </Link>
             </li> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/teams">
                 team
               </Link>
@@ -46,7 +46,7 @@ export const NavBar = () => {
               <Link className="nav-link" to="/functiondemo">
                 functiondemo
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <Link className="nav-link" to="/usestatedemo1">
                 usestatedemo1
@@ -72,6 +72,11 @@ export const NavBar = () => {
                 usestatedemo5
               </Link>
             </li> */}
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/useeffectdemo1">
+                useeffectdemo1
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/employee">
                 employee
@@ -81,7 +86,7 @@ export const NavBar = () => {
               <Link className="nav-link" to="/input">
                 input
               </Link>
-            </li> 
+            </li>  */}
             {/* <li className="nav-item">
               <Link className="nav-link" to="/formdemo1">
                 formdemo1
@@ -108,35 +113,35 @@ export const NavBar = () => {
               </Link>
             </li> */}
             <li className="nav-item">
-              <Link className="nav-link" to="/apidemo1">
-                apidemo1         
+              <Link className="nav-link" to="/getapidemo1">
+                getapidemo1         
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/apidemo2">
-                apidemo2        
+              <Link className="nav-link" to="/postapidemo1">
+                postapidemo1         
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/deleteapidemo1">
+                deleteapidemo1         
+              </Link>
+            </li>
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/omdbsearch">
                omdbsearch        
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/omdbsearch1">
-               omdbsearch1        
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/moviesearch">
                moviesearch        
               </Link>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/formpost">
                formpost        
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
